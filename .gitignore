@@ -1,3 +1,4 @@
 /virt
 *.pyc
 local.py
+.idea
