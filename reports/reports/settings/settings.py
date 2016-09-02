@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'dailyresult',
     'profiles',
     'accounts',
+    'main',
 ]
 AUTH_USER_MODEL = 'profiles.Profile'
 MIDDLEWARE_CLASSES = [
