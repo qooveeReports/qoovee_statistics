@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from accounts.forms import Registrations
 from django.contrib import auth
+from django.shortcuts import redirect
 
 
 def register(request):
@@ -10,12 +11,14 @@ def register(request):
         save.set_password(user.cleaned_data['password'])
         save.save()
         authenticated(request, request.POST.get('username'), request.POST.get('password'))
+        return redirect('/')
     return render(request, 'registrations.html', {'form': user})
 
 
 def authentication(request):
     if request.POST:
         authenticated(request, request.POST.get('username'), request.POST.get('password'))
+        return redirect('/')
     return render(request, 'login.html', {})
 
 

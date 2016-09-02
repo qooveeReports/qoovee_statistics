@@ -9,7 +9,7 @@ class ReportField(models.Model):
     contracts = models.IntegerField()
     prepayment = models.IntegerField()
     standart_shop = models.IntegerField()
-    user = models.ForeignKey(Profile)
+    user = models.ForeignKey(Profile, related_name='report')
 
     def __unicode__(self):
         return self.user.username
