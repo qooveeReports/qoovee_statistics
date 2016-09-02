@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def add_report(request):
+    return render(request, 'report_page.html', {})

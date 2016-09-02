@@ -2,4 +2,4 @@
 *.pyc
 local.py
 .idea
-/venv/
+/venv/in

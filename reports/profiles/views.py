@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    project_users_info = request.user
+    return render(request, 'profiles_info.html', {'profiles': project_users_info})
